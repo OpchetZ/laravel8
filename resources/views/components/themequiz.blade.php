@@ -356,7 +356,7 @@
 
                                 <!-- content -->
 
-                            {{$slot}}
+                                {{$slot}}
                             </div>
                         </div>
                     </div>
