@@ -4,6 +4,7 @@ use App\Http\Controllers\MyProfileController;
 use App\Http\Controllers\QuizController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Covid19Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -145,3 +146,5 @@ Route::post("study-match", [ QuizController::class, "match" ])->name("study-matc
 
 //     return view("study/match", compact('codes', 'values', 'majors'));
 // })->name('study-match');
+
+Route::get('/covid19', [ Covid19Controller::class,"index" ]);

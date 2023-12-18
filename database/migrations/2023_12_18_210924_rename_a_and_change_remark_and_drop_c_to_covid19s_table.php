@@ -14,8 +14,9 @@ class RenameAAndChangeRemarkAndDropCToCovid19sTable extends Migration
     public function up()
     {
         Schema::table('covid19s', function (Blueprint $table) {
-            
-           
+            $table->renameColumn('a', 'total_in_1m');        //เปลี่ยนชื่อ COLUMN
+            $table->text('remark')->nullable()->change();    //เปลื่ยน COLUMN TYPE
+            $table->dropColumn('c');                         //ลบ column ทิ้ง
         });
     }
 

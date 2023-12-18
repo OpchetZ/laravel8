@@ -14,8 +14,12 @@ class CreateYaiMakMakTable extends Migration
     public function up()
     {
         Schema::create('YaiMakMak', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->date('sunny')->nullable();
+            $table->string('asley')->nullable();
+            $table->integer('rawhand')->nullable();
+            $table->float('jeg')->nullable();
+            $table->text('naman')->nullable();
+            
         });
     }
 
