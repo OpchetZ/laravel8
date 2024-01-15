@@ -166,20 +166,3 @@ Route::delete("/product/{id}", [ProductController::class, "destroy"])->name('pro
 Route::resource('/staff', StaffController::class );
 //surchet
 Route::get("/mainchetprofile",[Surachet::class, "mainchet"]);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__ . '/auth.php';
-
-Route::middleware(['auth', 'role:admin,teacher'])->group(function () {
-    Route::get('/teacher', function () {
-        return view('teacher');
-    });
-    
-    });
-    
-
-
-    

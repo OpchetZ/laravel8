@@ -16,6 +16,12 @@ class Covid19Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+{
+    $this->middleware('auth');
+    $this->middleware('role:admin,teacher') ;
+}
+
     public function index()
     {
     //     $sql = "select * from covid19s";

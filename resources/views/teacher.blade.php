@@ -1,4 +1,5 @@
-            <table class="table table-striped">
+          
+           <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -8,14 +9,15 @@
                 </thead>
                 <tbody>
                     @php
-                    $teachers = json_decode(file_get_contents('https://raw.githubusercontent.com/arc6828/laravel8/main/public/json/teachers.json'));
+                        $teachers = json_decode(file_get_contents('https://raw.githubusercontent.com/arc6828/laravel8/main/public/json/teachers.json'));
                     @endphp
                     @foreach ($teachers as $row)
-                    <tr>
-                        <td><img class="rounded" src="{{ $row->image }}" height="30" /></td>
-                        <td>{{ $row->role }} {{ $row->name }}</td>
-                        <td>{{ $row->email }}</td>
-                    </tr>
+                        <tr>
+                            <td><img class="rounded" src="{{ $row->image }}" height="30" /></td>
+                            <td>{{ $row->role }} {{ $row->name }}</td>
+                            <td>{{ $row->email }}</td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
+           
