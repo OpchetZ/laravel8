@@ -8,6 +8,8 @@ use App\Http\Controllers\Covid19Controller;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\Surachet;
+use App\Http\Controllers\PostController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -183,3 +185,7 @@ Route::middleware(['auth', 'role:admin,teacher'])->group(function () {
 
 
     
+
+Route::resource('post', 'PostController');
+
+Route::resource('post', PostController::class);
