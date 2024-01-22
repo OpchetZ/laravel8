@@ -56,8 +56,8 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            
-                            
+
+
                             <hr>
                             @php
                                 $vehicle = $user
@@ -117,7 +117,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
-                                    
+
                                 </tbody>
                             </table>
 
@@ -128,8 +128,7 @@
                             <div>ค่าระยะไมล์มากสุด : {{ $max }} </div>
                             <hr>
                             @php
-                            $post = $user
-                            ->post()->get();
+                                $post = $user->post()->get();
                             @endphp
                             <h2 class="pt-4">{{ $user->name }}'s Post</h2>
                             <table class="table">
@@ -176,8 +175,8 @@
                                 </tbody>
                             </table>
                         </div>
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
